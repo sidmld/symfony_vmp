@@ -1,0 +1,144 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}
+
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+    <div id="main">
+
+        <!-- Introduction -->
+        <section id="intro" class="main">
+            <div class="spotlight">
+
+                <div class="content">
+                    <header class="major">
+                        <h2>Notre métier</h2>
+                    </header>
+
+                    {% block vmp_body %}                                            
+
+                    {% endblock %}
+
+                </div>
+                <span class="image"><img src="images/v1.png" alt="" /></span>
+            </div>
+        </section>
+        <section id="first" class="main special">
+            <header class="major">
+                <h2>Nos Services</h2>
+            </header>
+            <ul class="features">
+                <li>
+                    <!--	<span class="icon major style1 fa-code"></span>-->
+                    <h3>pilotage d'entreprise </h3>
+                    <p>Nos conseils en gestion et pilotage d'entreprise permettent aux managers et aux opérationnels
+                        de disposer d’un système de contrôle de la performance et d’aide à la décision.</p>
+                </li>
+                <li>
+                    <!--	<span class="icon major style3 fa-copy"></span>-->
+                    <h3>Audit</h3>
+                    <p>Notre audit permet de vous donner une situation précise de votre entreprise.
+                        Notre démarche d'audit s'inscrit dans un cadre plus général mis en oeuvre pour l'amélioration continue
+                        de votre environnement de contrôle interne.</p>
+                </li>
+                <li>
+                    <!--<span class="icon major style5 fa-diamond"></span>-->
+                    <h3>Systèmes d'informations</h3>
+                    <p>Vous comptez mettre en place un Système d'Informations pour votre entreprise, nous vous apportons toute notre expérience</p>
+                </li>
+            </ul>
+            <footer class="major">
+                <ul class="actions">
+                    <!--	<li><a href="generic.html" class="button">Learn More</a></li>-->
+                </ul>
+            </footer>
+        </section>
+
+        <!-- Second Section -->
+        <section id="second" class="main special">
+            <header class="major">
+                <h2>A propos</h2>
+                <p>Quelle que soit l’activité, aujourd’hui toutes les entreprises sont confrontées à une pression
+                    concurrentielle accrue, aux évolutions technologiques...Pour permettre aux managers et aux opérationnels
+                    de se consacrer entièrement à leur coeur de métier, un accompagnement dans la gestion de l'entreprise est une
+                    nécessité pour ne pas dire une obligation. Dans ce domaine là, les entreprises ne sont pas toutes logées à la même enseigne,
+                    en particulier les TPE et certaines PME. Le manque d’outils de gestion est principalement lié à un problème de moyens même si
+                    parfois il peut s’agir d’un problème de sensibilisation à l’utilité et le bénéfice apporté par ces outils.
+                    <br/> Nous conseillons les dirigeants pour une optimisation de la mobilisation des ressources des entreprises.
+                    <br/> <br/>
+                    Avec nos solutions, vous arriverez à atteindre les objectifs de 
+                    Controle de gestion vignette: <br/>
+                    - Maîtriser les coûts. <br/>
+
+                    - Optimiser les performances.<br/>
+
+                    - Une transparence sur la gestion des ressources de votre entreprise.<br/>
+
+                    - Le développement de votre réactivité dans la prise de décisions stratégiques.<br/>
+
+                </p>
+            </header>
+            <ul class="statistics">
+
+                <li class="style2">
+                    <span class="icon fa-folder-open-o"></span>
+                    <strong></strong> Optimisation
+                </li>
+                <li class="style3">
+                    <span class="icon fa-signal"></span>
+                    <strong></strong> Statistiques
+                </li>
+                <li class="style4">
+                    <span class="icon fa-laptop"></span>
+                    <strong></strong> Tableaux de bord
+                </li>
+
+            </ul>
+            <p class="content">Une expérience de plus de 20 ans dans divers secteurs d'activités et
+                dans plusieurs types de structures (PME - Multinationales - Organismes d'Etat)</p>
+            <footer class="major">
+                <ul class="actions">
+                    <!--	<li><a href="generic.html" class="button">Learn More</a></li>-->
+                </ul>
+            </footer>
+        </section>
+
+        <!-- Get Started -->
+        <section id="cta" class="main special">
+            <header class="major">
+                <h2>Connectez-vous</h2>
+                <p>Connectez vous, et si vous n'avez pas de compte créer le.</p>
+            </header>
+            <footer class="major">
+                <ul class="actions">
+                    <li><a href="generic.html" class="button special">Connecter</a></li>
+                    <li><a href="generic.html" class="button">Créer un compte</a></li>
+                </ul>
+            </footer>
+        </section>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

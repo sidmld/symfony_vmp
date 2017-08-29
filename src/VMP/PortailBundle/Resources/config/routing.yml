@@ -1,0 +1,21 @@
+vmp_portail_homepage:
+    path:     /
+    defaults: { _controller: VMPPortailBundle:Default:index }
+
+vmp_portail_bienvenue:
+    path:     /Portail/{page}
+    defaults:   
+        _controller: VMPPortailBundle:Advert:index
+        page: 1
+    requirements: 
+        page: \d*      
+    
+vmp_portail_view:
+    path:     /Portail/advert/{id}
+    defaults: { _controller: VMPPortailBundle:Advert:view } 
+    
+vmp_portail_add:
+    path:     /Portail/add
+    defaults: { _controller: VMPPortailBundle:Advert:add }
+    
+            

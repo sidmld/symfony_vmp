@@ -1,0 +1,4 @@
+services:
+#    vmp_portail.example:
+#        class: VMP\PortailBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

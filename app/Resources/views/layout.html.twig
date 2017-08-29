@@ -1,0 +1,121 @@
+{# app/Resources/views/layout.html.twig #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}VMP Consulting{% endblock %}</title>
+        
+        <link rel="stylesheet" href="assets/css/main.css" />
+        
+        {% block stylesheets %}
+
+            {#    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css" /> #}
+            {% stylesheets filter='cssrewrite, scssphp' 
+        'bundles/ocplatform/css/main.css'
+        'assets/js/main.js'
+        'assets/css/ie8.css'
+            %}
+            <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+            {% endstylesheets %}
+
+            
+		
+	
+        {% endblock %}
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+            <!-- Header -->
+            <header id="header" class="alt">
+                <span class="logo"><img src="images/logo.png" alt="" /></span>
+                <h1>VMP CONSULTING</h1>
+                <p>VMP consulting accompagne les PME, PMI, TPE et TPI <br />  pour la maîtrise de leur performance. 
+                </p>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#intro" class="active">Accueil</a></li>
+                    <li><a href="#first">Services</a></li>
+                    <li><a href="#second">A propos</a></li>
+                    <li><a href="#cta">connectez-vous</a></li>
+                </ul>
+            </nav>
+
+            {% block body %}
+
+            {% endblock %}
+
+
+            <footer id="footer">
+                <section>
+                    <h2>VMP Consulting</h2>
+                    <p>Une expérience de plus de 20 ans dans divers secteurs d'activités et dans plusieurs types de structures
+                        (PME - Multinationales - Organismes d'Etat)<br>
+                        VMP Consulting est un bureau spécialisé dans la maîtrise des performances des entreprises.</p>
+                    <ul class="actions">
+                        <!--<li><a href="generic.html" class="button">Learn More</a></li>-->
+                    </ul>
+                </section>
+                <section>
+                    <h2>contacts</h2>
+                    <dl class="alt">
+                        <dt>Address</dt>
+                        <dd>4 rue des Indes Noires 80440 Boves</dd>
+                        <dt>Telephone</dt>
+                        <dd>03.22.90.53.07</dd>
+                        <dt>Email</dt>
+                        <dd><a href="#">contact@vmp-consulting.com</a></dd>
+
+                    </dl>
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+
+                    </ul>
+                </section>
+                <p class="copyright">&copy;Copyright 2016. VMP Consulting. All rights reserved.</p>
+            </footer>
+        </div>
+
+
+
+
+            <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+        {% block javascripts %} 
+
+            {% javascripts filter='jsqueeze'
+         'assets/js/jquery.min.js' 
+         'assets/js/jquery.scrollex.min.js'
+         'assets/js/jquery.scrolly.min.js'
+         'assets/js/skel.min.js'
+         'assets/js/util.js'
+         'assets/js/ie/respond.min.js'
+         'assets/js/main.js'
+            %}
+
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+
+            {% endjavascripts %}
+
+
+            
+                        
+        {% endblock %}
+
+    </body>
+</html>
