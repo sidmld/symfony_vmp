@@ -6,12 +6,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 //use Symfony\Component\HttpFoundation\RedirectResponse;
-
+use VMP\PortailBundle\Entity\Societe;
 
 class AdvertController extends  Controller
 {
     public function indexAction()
     {
+     
+        
+        
+        
        
         return $this->render('VMPPortailBundle:Advert:index.html.twig');
         
