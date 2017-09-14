@@ -14,16 +14,22 @@
 
 {% block vmp_body %}
 
-    <p>
-
-        VMP-Consulting est un bureau spécialisé dans le contrôle de gestion pour les TPE/TPI, les PME/PMI et les collectivités territoriales.
-        Nous les accompagnons et les conseillons pour aller vers l'efficacité et l'efficience dans l'utilisation de leurs ressources
-        afin d'atteindre leurs objectifs.
-        
-    </p>
-    <ul class="actions">
-        <!--	<li><a href="generic.html" class="button"></a></li>-->
-    </ul>
+     <section id="cta" class="main special">
+            <header class="major">
+                <h2>Connexion</h2>
+               
+            </header>
+         
+           
+          
+            <footer class="major">
+                <ul class="actions">
+                    <li> <a href= "{{ path('fos_user_security_login') }}"
+                           class="button special">Connecter</a></li>
+                   <li><a href="{{ path('fos_user_registration_register')}}" class="button">Créer un compte</a></li> 
+                </ul>
+            </footer>
+        </section>
 
 {% endblock %}
 

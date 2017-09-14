@@ -12,6 +12,15 @@
 
 {% block body %}
 
+    <nav id="nav">
+                <ul>
+                    <li><a href="#intro" class="active">Accueil</a></li>
+                    <li><a href="#first">Services</a></li>
+                    <li><a href="#second">A propos</a></li>
+                    <li><a href="#cta">connexion</a></li>
+                </ul>
+            </nav>
+    
     <div id="main">
 
         <!-- Introduction -->
@@ -22,10 +31,16 @@
                     <header class="major">
                         <h2>Notre métier</h2>
                     </header>
+                    <p>
 
-                    {% block vmp_body %}                                            
+                        VMP-Consulting est un bureau spécialisé dans le contrôle de gestion pour les TPE/TPI, les PME/PMI et les collectivités territoriales.
+                        Nous les accompagnons et les conseillons pour aller vers l'efficacité et l'efficience dans l'utilisation de leurs ressources
+                        afin d'atteindre leurs objectifs.
 
-                    {% endblock %}
+                    </p>
+                    <ul class="actions">
+                        <!--	<li><a href="generic.html" class="button"></a></li>-->
+                    </ul>
 
                 </div>
                 <span class="image"><img src="images/v1.png" alt="" /></span>
@@ -112,18 +127,11 @@
         </section>
 
         <!-- Get Started -->
-        <section id="cta" class="main special">
-            <header class="major">
-                <h2>Connectez-vous</h2>
-                <p>Connectez vous, et si vous n'avez pas de compte créer le.</p>
-            </header>
-            <footer class="major">
-                <ul class="actions">
-                    <li><a href="generic.html" class="button special">Connecter</a></li>
-                    <li><a href="generic.html" class="button">Créer un compte</a></li>
-                </ul>
-            </footer>
-        </section>
+        {% block vmp_body %}                                            
+
+        {% endblock %}
+
+
 
 
 

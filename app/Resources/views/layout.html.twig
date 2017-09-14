@@ -12,7 +12,7 @@
         
         {% block stylesheets %}
 
-            {#    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css" /> #}
+               <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css" /> 
             {% stylesheets filter='cssrewrite, scssphp' 
         'bundles/ocplatform/css/main.css'
         'assets/js/main.js'
@@ -33,21 +33,14 @@
 
             <!-- Header -->
             <header id="header" class="alt">
-                <span class="logo"><img src="images/logo.png" alt="" /></span>
+                <span class="logo"><img src="{{ asset('images/logo.png') }}" alt="" /></span>
                 <h1>VMP CONSULTING</h1>
                 <p>VMP consulting accompagne les PME, PMI, TPE et TPI <br />  pour la maîtrise de leur performance. 
                 </p>
             </header>
 
             <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="#intro" class="active">Accueil</a></li>
-                    <li><a href="#first">Services</a></li>
-                    <li><a href="#second">A propos</a></li>
-                    <li><a href="#cta">connectez-vous</a></li>
-                </ul>
-            </nav>
+            
 
             {% block body %}
 
@@ -81,7 +74,7 @@
 
                     </ul>
                 </section>
-                <p class="copyright">&copy;Copyright 2016. VMP Consulting. All rights reserved.</p>
+                <p class="copyright">&copy;Copyright 2017. VMP Consulting. Tous les droits sont reservés.</p>
             </footer>
         </div>
 

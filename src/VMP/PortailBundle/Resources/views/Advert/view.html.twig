@@ -1,0 +1,12 @@
+
+
+
+<p> Compte crée.</p>
+
+ {% for message in app.session.flashbag.get('message') %}
+
+        <p>Message flash : {{ message }}</p>
+
+      {% endfor %}
+      
+     

@@ -113,6 +113,11 @@ class Societe
      * @ORM\OneToOne(targetEntity="VMP\PortailBundle\Entity\Budget" , cascade={"persist"})
      */
      private $budget;
+     
+     /**
+     * @ORM\OneToOne(targetEntity="VMP\UserBundle\Entity\User" , cascade={"persist"})
+     */
+     private $user;
 
     /**
      * Get id

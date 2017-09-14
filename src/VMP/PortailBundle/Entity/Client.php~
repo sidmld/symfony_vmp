@@ -90,6 +90,11 @@ class Client
      * @ORM\Column(name="autre", type="string", length=255, nullable=true)
      */
     private $autre;
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
+     */
+    private $societes;
 
    
 
@@ -346,4 +351,3 @@ class Client
 
     
 }
-

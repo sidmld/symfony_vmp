@@ -44,7 +44,6 @@ class Utilisateur
     
     /**
      * @ORM\OneToOne(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
      */
     private $societe;
 
@@ -130,5 +129,28 @@ class Utilisateur
     {
         return $this->email;
     }
-}
 
+    /**
+     * Set societe
+     *
+     * @param \VMP\PortailBundle\Entity\Societe $societe
+     *
+     * @return Utilisateur
+     */
+    public function setSociete(\VMP\PortailBundle\Entity\Societe $societe)
+    {
+        $this->societe = $societe;
+
+        return $this;
+    }
+
+    /**
+     * Get societe
+     *
+     * @return \VMP\PortailBundle\Entity\Societe
+     */
+    public function getSociete()
+    {
+        return $this->societe;
+    }
+}

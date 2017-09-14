@@ -44,7 +44,6 @@ class Utilisateur
     
     /**
      * @ORM\OneToOne(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
      */
     private $societe;
 

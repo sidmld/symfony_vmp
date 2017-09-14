@@ -113,6 +113,11 @@ class Societe
      * @ORM\OneToOne(targetEntity="VMP\PortailBundle\Entity\Budget" , cascade={"persist"})
      */
      private $budget;
+     
+     /**
+     * @ORM\OneToOne(targetEntity="VMP\UserBundle\Entity\User" , cascade={"persist"})
+     */
+     private $user;
 
     /**
      * Get id
@@ -438,5 +443,29 @@ class Societe
     public function getBudget()
     {
         return $this->budget;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \VMP\UserBundle\Entity\User $user
+     *
+     * @return Societe
+     */
+    public function setUser(\VMP\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \VMP\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
