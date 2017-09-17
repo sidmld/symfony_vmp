@@ -1,13 +1,30 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-<div id="main">
-      <section id="cta" class="main special">
+<div id="wrapper">
+  
+    <div id="main">
+        {#   <h1> Connectez-vous  </h1>
+        <p>  Espace sécurisé    </p>
+       
+        <section id="content" class="main">  #}
+            
+            
+             <section id="cta" class="main special">
+            <header class="major">
+                <h2>Connecter-vous</h2>
+               
+            </header>
+         
+           
+          
+            <footer class="major">
 
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
 
 <form action= "{{ path("fos_user_security_check") }}" method="post">
+    
     {% if csrf_token %}
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
@@ -21,8 +38,9 @@
     <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
     <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label> <br> <br>
 
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+    <input class="button special" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
 </form>
-
-      </section>
-</div
+            </footer>
+        </section>
+    </div>
+</div>

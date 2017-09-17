@@ -1,10 +1,42 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+
+<div id="wrapper">
+  
+    <div id="main">
+        {#   <h1> Connectez-vous  </h1>
+        <p>  Espace sécurisé    </p>
+       
+        <section id="content" class="main">  #}
+            
+            
+             <section id="cta" class="main special">
+            <header class="major">
+                <h2>Créer votre compte</h2>
+               
+            </header>
+         
+           
+          
+            <footer class="major">
+
+
+
+
 {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
     {{ form_widget(form) }}
     <br>
     
     <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+        <input class="button special" type="submit" value="{{ 'registration.submit'|trans }}" />
     </div>
 {{ form_end(form) }}
+
+
+
+
+
+  </footer>
+        </section>
+    </div>
+</div>
