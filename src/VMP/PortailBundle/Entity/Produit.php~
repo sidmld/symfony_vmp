@@ -80,10 +80,9 @@ class Produit
     private $autre;
 
     /**
-     * @ORM\ManyToOne(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="produit" , cascade={"persist"})
      */
-    private $societe;
+    protected $societe;
 
     /**
      * Get id
@@ -288,4 +287,6 @@ class Produit
     {
         return $this->autre;
     }
+
+   
 }

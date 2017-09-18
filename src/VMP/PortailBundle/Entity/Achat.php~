@@ -223,4 +223,76 @@ class Achat
     {
         return $this->autre;
     }
+
+    /**
+     * Set fournisseur
+     *
+     * @param \VMP\PortailBundle\Entity\Fournisseur $fournisseur
+     *
+     * @return Achat
+     */
+    public function setFournisseur(\VMP\PortailBundle\Entity\Fournisseur $fournisseur)
+    {
+        $this->fournisseur = $fournisseur;
+
+        return $this;
+    }
+
+    /**
+     * Get fournisseur
+     *
+     * @return \VMP\PortailBundle\Entity\Fournisseur
+     */
+    public function getFournisseur()
+    {
+        return $this->fournisseur;
+    }
+
+    /**
+     * Set produit
+     *
+     * @param \VMP\PortailBundle\Entity\Produit $produit
+     *
+     * @return Achat
+     */
+    public function setProduit(\VMP\PortailBundle\Entity\Produit $produit)
+    {
+        $this->produit = $produit;
+
+        return $this;
+    }
+
+    /**
+     * Get produit
+     *
+     * @return \VMP\PortailBundle\Entity\Produit
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * Set plancompt
+     *
+     * @param \VMP\PortailBundle\Entity\PlanCompt $plancompt
+     *
+     * @return Achat
+     */
+    public function setPlancompt(\VMP\PortailBundle\Entity\PlanCompt $plancompt)
+    {
+        $this->plancompt = $plancompt;
+
+        return $this;
+    }
+
+    /**
+     * Get plancompt
+     *
+     * @return \VMP\PortailBundle\Entity\PlanCompt
+     */
+    public function getPlancompt()
+    {
+        return $this->plancompt;
+    }
 }

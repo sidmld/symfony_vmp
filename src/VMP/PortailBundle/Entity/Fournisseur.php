@@ -84,10 +84,7 @@ class Fournisseur
      */
     private $autre;
     
-    /**
-     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     */
-    private $societes;
+    
 
     
 
@@ -318,46 +315,5 @@ class Fournisseur
         return $this->autre;
     }
 
-   
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->societes = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add societe
-     *
-     * @param \VMP\PortailBundle\Entity\Societe $societe
-     *
-     * @return Fournisseur
-     */
-    public function addSociete(\VMP\PortailBundle\Entity\Societe $societe)
-    {
-        $this->societes[] = $societe;
-
-        return $this;
-    }
-
-    /**
-     * Remove societe
-     *
-     * @param \VMP\PortailBundle\Entity\Societe $societe
-     */
-    public function removeSociete(\VMP\PortailBundle\Entity\Societe $societe)
-    {
-        $this->societes->removeElement($societe);
-    }
-
-    /**
-     * Get societes
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getSocietes()
-    {
-        return $this->societes;
-    }
+     
 }

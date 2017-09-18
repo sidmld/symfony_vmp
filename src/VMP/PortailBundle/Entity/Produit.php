@@ -80,10 +80,9 @@ class Produit
     private $autre;
 
     /**
-     * @ORM\ManyToOne(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="produit" , cascade={"persist"})
      */
-    private $societe;
+    protected $societe;
 
     /**
      * Get id
@@ -289,14 +288,16 @@ class Produit
         return $this->autre;
     }
 
+   
+
     /**
      * Set societe
      *
-     * @param \VMP\PortailBundle\Entity\Societe $societe
+     * @param \VMP\UserBundle\Entity\User $societe
      *
      * @return Produit
      */
-    public function setSociete(\VMP\PortailBundle\Entity\Societe $societe)
+    public function setSociete(\VMP\UserBundle\Entity\User $societe = null)
     {
         $this->societe = $societe;
 
@@ -306,7 +307,7 @@ class Produit
     /**
      * Get societe
      *
-     * @return \VMP\PortailBundle\Entity\Societe
+     * @return \VMP\UserBundle\Entity\User
      */
     public function getSociete()
     {

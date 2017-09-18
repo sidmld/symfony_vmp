@@ -84,10 +84,7 @@ class Fournisseur
      */
     private $autre;
     
-    /**
-     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     */
-    private $societes;
+    
 
     
 
@@ -318,5 +315,5 @@ class Fournisseur
         return $this->autre;
     }
 
-   
+     
 }

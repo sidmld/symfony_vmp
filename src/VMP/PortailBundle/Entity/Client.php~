@@ -91,10 +91,7 @@ class Client
      */
     private $autre;
     
-    /**
-     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Societe" , cascade={"persist"})
-     */
-    private $societes;
+    
 
    
 

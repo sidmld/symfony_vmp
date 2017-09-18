@@ -243,4 +243,76 @@ class Vente
     {
         return $this->autre;
     }
+
+    /**
+     * Set client
+     *
+     * @param \VMP\PortailBundle\Entity\Client $client
+     *
+     * @return Vente
+     */
+    public function setClient(\VMP\PortailBundle\Entity\Client $client)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \VMP\PortailBundle\Entity\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set produit
+     *
+     * @param \VMP\PortailBundle\Entity\Produit $produit
+     *
+     * @return Vente
+     */
+    public function setProduit(\VMP\PortailBundle\Entity\Produit $produit)
+    {
+        $this->produit = $produit;
+
+        return $this;
+    }
+
+    /**
+     * Get produit
+     *
+     * @return \VMP\PortailBundle\Entity\Produit
+     */
+    public function getProduit()
+    {
+        return $this->produit;
+    }
+
+    /**
+     * Set plancompt
+     *
+     * @param \VMP\PortailBundle\Entity\PlanCompt $plancompt
+     *
+     * @return Vente
+     */
+    public function setPlancompt(\VMP\PortailBundle\Entity\PlanCompt $plancompt)
+    {
+        $this->plancompt = $plancompt;
+
+        return $this;
+    }
+
+    /**
+     * Get plancompt
+     *
+     * @return \VMP\PortailBundle\Entity\PlanCompt
+     */
+    public function getPlancompt()
+    {
+        return $this->plancompt;
+    }
 }
