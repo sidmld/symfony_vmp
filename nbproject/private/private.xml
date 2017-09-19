@@ -3,29 +3,40 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Client.php</file>
+            <file>file:/var/www/Symfony/src/VMP/UserBundle/DataFixtures/ORM/LoadUser.php</file>
             <file>file:/var/www/Symfony/src/VMP/UserBundle/VMPUserBundle.php</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig</file>
             <file>file:/var/www/Symfony/app/config/config.yml</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Vente.php</file>
             <file>file:/var/www/Symfony/src/VMP/PortailBundle/Resources/views/layout.html.twig</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/PlanCompt.php</file>
             <file>file:/var/www/Symfony/src/VMP/UserBundle/Resources/views/layout.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Profile/edit_content.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig</file>
             <file>file:/var/www/Symfony/app/config/security.yml</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Personnel.php</file>
+            <file>file:/var/www/Symfony/app/AppKernel.php</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Produit.php</file>
             <file>file:/var/www/Symfony/app/Resources/views/layout.html.twig</file>
-            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Societe.php</file>
             <file>file:/var/www/Symfony/src/VMP/UserBundle/Entity/User.php</file>
+            <file>file:/var/www/Symfony/composer.json</file>
             <file>file:/var/www/Symfony/src/VMP/PortailBundle/Controller/AdvertController.php</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Security/login.html.twig</file>
             <file>file:/var/www/Symfony/app/config/routing.yml</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/layout.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Security/login_content.html.twig</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Achat.php</file>
             <file>file:/var/www/Symfony/src/VMP/PortailBundle/Resources/config/routing.yml</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Registration/check_email.html.twig</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Budget.php</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Controller/AdminController.php</file>
             <file>file:/var/www/Symfony/app/Resources/VMPUserBundle/views/layout.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Profile/show.html.twig</file>
             <file>file:/var/www/Symfony/src/VMP/PortailBundle/Resources/views/Advert/index.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Registration/register.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig</file>
+            <file>file:/var/www/Symfony/src/VMP/PortailBundle/Entity/Fournisseur.php</file>
             <file>file:/var/www/Symfony/src/VMP/PortailBundle/Resources/views/Advert/view.html.twig</file>
             <file>file:/var/www/Symfony/app/Resources/FOSUserBundle/views/Registration/email.txt.twig</file>
         </group>

@@ -7,12 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% block title %}VMP Consulting{% endblock %}</title>
-        
+
         <link rel="stylesheet" href="assets/css/main.css" />
-        
+
+
+
         {% block stylesheets %}
 
-               <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css" /> 
+            <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" type="text/css" /> 
+
+
+
             {% stylesheets filter='cssrewrite, scssphp' 
         'bundles/ocplatform/css/main.css'
         'assets/js/main.js'
@@ -21,9 +26,9 @@
             <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
             {% endstylesheets %}
 
-            
-		
-	
+
+
+
         {% endblock %}
 
     </head>
@@ -40,7 +45,7 @@
             </header>
 
             <!-- Nav -->
-            
+
 
             {% block body %}
 
@@ -81,13 +86,15 @@
 
 
 
-            <script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        <script src="assets/js/main.js"></script>
+
+
 
         {% block javascripts %} 
 
@@ -106,8 +113,8 @@
             {% endjavascripts %}
 
 
-            
-                        
+
+
         {% endblock %}
 
     </body>
