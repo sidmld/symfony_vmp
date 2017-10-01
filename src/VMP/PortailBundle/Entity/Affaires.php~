@@ -1,0 +1,67 @@
+<?php
+
+namespace VMP\PortailBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Affaires
+ *
+ * @ORM\Table(name="affaires")
+ * @ORM\Entity(repositoryClass="VMP\PortailBundle\Repository\AffairesRepository")
+ */
+class Affaires
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255, nullable=true)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255, nullable=true)
+     */
+    private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="mois", type="string", length=255, nullable=true)
+     */
+    private $mois;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="annee", type="integer", nullable=true)
+     */
+    private $annee;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="montant", type="float", nullable=true)
+     */
+    private $montant;
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="affaires" , cascade={"persist"})
+     */
+    protected $societe;
+    
+    
+   
+}

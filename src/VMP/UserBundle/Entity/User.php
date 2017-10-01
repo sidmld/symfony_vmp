@@ -127,6 +127,24 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Produit",mappedBy="societe" , cascade={"persist"})
      */
     protected $produit;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Affaires",mappedBy="societe" , cascade={"persist"})
+     */
+    protected $affaires;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Charges",mappedBy="societe" , cascade={"persist"})
+     */
+    protected $charges;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Activite",mappedBy="societe" , cascade={"persist"})
+     */
+    protected $activites;
+
+    /////   a netoyer
+    
 
     /**
      * Set nomsociete
@@ -550,5 +568,107 @@ class User extends BaseUser
     public function getProduit()
     {
         return $this->produit;
+    }
+
+    /**
+     * Add affaire
+     *
+     * @param \VMP\PortailBundle\Entity\Affaires $affaire
+     *
+     * @return User
+     */
+    public function addAffaire(\VMP\PortailBundle\Entity\Affaires $affaire)
+    {
+        $this->affaires[] = $affaire;
+
+        return $this;
+    }
+
+    /**
+     * Remove affaire
+     *
+     * @param \VMP\PortailBundle\Entity\Affaires $affaire
+     */
+    public function removeAffaire(\VMP\PortailBundle\Entity\Affaires $affaire)
+    {
+        $this->affaires->removeElement($affaire);
+    }
+
+    /**
+     * Get affaires
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAffaires()
+    {
+        return $this->affaires;
+    }
+
+    /**
+     * Add charge
+     *
+     * @param \VMP\PortailBundle\Entity\Charges $charge
+     *
+     * @return User
+     */
+    public function addCharge(\VMP\PortailBundle\Entity\Charges $charge)
+    {
+        $this->charges[] = $charge;
+
+        return $this;
+    }
+
+    /**
+     * Remove charge
+     *
+     * @param \VMP\PortailBundle\Entity\Charges $charge
+     */
+    public function removeCharge(\VMP\PortailBundle\Entity\Charges $charge)
+    {
+        $this->charges->removeElement($charge);
+    }
+
+    /**
+     * Get charges
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCharges()
+    {
+        return $this->charges;
+    }
+
+    /**
+     * Add activite
+     *
+     * @param \VMP\PortailBundle\Entity\Activite $activite
+     *
+     * @return User
+     */
+    public function addActivite(\VMP\PortailBundle\Entity\Activite $activite)
+    {
+        $this->activites[] = $activite;
+
+        return $this;
+    }
+
+    /**
+     * Remove activite
+     *
+     * @param \VMP\PortailBundle\Entity\Activite $activite
+     */
+    public function removeActivite(\VMP\PortailBundle\Entity\Activite $activite)
+    {
+        $this->activites->removeElement($activite);
+    }
+
+    /**
+     * Get activites
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getActivites()
+    {
+        return $this->activites;
     }
 }

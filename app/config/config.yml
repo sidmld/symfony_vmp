@@ -114,5 +114,19 @@ easy_admin:
             class: VMP\PortailBundle\Entity\PlanCompt
         Vente: 
             class: VMP\PortailBundle\Entity\Vente
+        Affaires: 
+            class: VMP\PortailBundle\Entity\Affaires
+            label: 'Chiffres d Affaires'
+            list: 
+                title: "Les chiffres d affaires"
+        Activite: 
+            class: VMP\PortailBundle\Entity\Activite  
+        Charges: 
+            class: VMP\PortailBundle\Entity\Charges    
+            
+            
+cmen_google_charts:
+    version: "current"
+    language: "fr"
      
         

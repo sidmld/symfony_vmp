@@ -28,6 +28,9 @@
                 <div class="fos_user_user_show">
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
+    <p> {{ user.nomsociete }} </p>
+    <p> {{user.ville }} </p>
+    <p> {{ user.telephone }} </p>
    
 
 </div>
@@ -46,29 +49,20 @@
         <header class="major">
             <h2>Tableau de bord</h2>
         </header>
-        <ul class="features">
-            <li>
-                <!--	<span class="icon major style1 fa-code"></span>-->
-                <h3>pilotage d'entreprise </h3>
-                <p>Nos conseils en gestion et pilotage d'entreprise permettent aux managers et aux opérationnels
-                    de disposer d’un système de contrôle de la performance et d’aide à la décision.</p>
-            </li>
-            <li>
-                <!--	<span class="icon major style3 fa-copy"></span>-->
-                <h3>Audit</h3>
-                <p>Notre audit permet de vous donner une situation précise de votre entreprise.
-                    Notre démarche d'audit s'inscrit dans un cadre plus général mis en oeuvre pour l'amélioration continue
-                    de votre environnement de contrôle interne.</p>
-            </li>
-            <li>
-                <!--<span class="icon major style5 fa-diamond"></span>-->
-                <h3>Systèmes d'informations</h3>
-                <p>Vous comptez mettre en place un Système d'Informations pour votre entreprise, nous vous apportons toute notre expérience</p>
-            </li>
-        </ul>
+      {#  <ul class="features"> #}
+        
+     {#  <div id="curve_chart" ></div> #}
+      
+             
+      {{render(controller("VMPPortailBundle:Advert:view")) }} 
+          
+          
+  
+         
         <footer class="major">
             <ul class="actions">
                 <!--	<li><a href="generic.html" class="button">Learn More</a></li>-->
+               
             </ul>
         </footer>
     </section>
@@ -123,4 +117,40 @@
 
 </div> 
     
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Mois', 'Reel', 'Ambition'],
+          ['Janvier',  35312,      22769],
+          ['Fevrier',  ,      27284],
+          ['Mars',  37447,       29936],
+          ['Avril',  30236,      28912],
+          ['Mai',  31237,      27499],
+          ['Juin',  30600,       25060],
+          ['Juillet',  29738,       24174],          
+          ['Aout',  27000,       23521],
+          ['Septembre',  34000,      32042]
+        ]);
+
+        var options = {
+          title: 'Chiffre d\'affaire',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    
+    
+          
+         
+          
+
     
