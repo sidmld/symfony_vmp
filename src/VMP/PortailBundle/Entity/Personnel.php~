@@ -78,7 +78,8 @@ class Personnel
     private $address;
 
    /**
-     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="personnel" , cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="personnel" )
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $societe;
 
@@ -290,4 +291,28 @@ class Personnel
     
 
    
+
+    /**
+     * Set societe
+     *
+     * @param \VMP\UserBundle\Entity\User $societe
+     *
+     * @return Personnel
+     */
+    public function setSociete(\VMP\UserBundle\Entity\User $societe = null)
+    {
+        $this->societe = $societe;
+
+        return $this;
+    }
+
+    /**
+     * Get societe
+     *
+     * @return \VMP\UserBundle\Entity\User
+     */
+    public function getSociete()
+    {
+        return $this->societe;
+    }
 }

@@ -1,9 +1,46 @@
 
+ <div id="curve_chart" style='width: 900px;' ></div>
+ 
+       
+           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      
+     
 
-           
-         
+      function drawChart() {
+          
+        var data = google.visualization.arrayToDataTable([
+          ['Mois', 'Reel', 'Ambition'],           
+          ['Janvier',  35312,      22769],
+          ['Fevrier',  ,      27284],
+          ['Mars',  37447,       29936],
+          ['Avril',  30236,      28912],
+          ['Mai',  31237,      27499],
+          ['Juin',  30600,       25060],
+          ['Juillet',  29738,       24174],          
+          ['Aout',  27000,       23521],
+          ['Septembre',  34000,      32042]
+        ]);
 
-<p> En cours M.{{app.user.username }} .</p>
+        var options = {
+          title: 'Chiffre d\'affaire',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+      
+     
+     
+     
+    
+     
+    </script>
 
   <div id="div_chart"></div>
     
@@ -13,9 +50,9 @@
         {{ gc_draw(piechart, 'div_chart') }}
     </script>
            
-     <div class="well">
+     <div " class="well">
 
- {# {{ form(form) }} #}
+ {# {{ form(form) }} 
 
     
  
@@ -24,7 +61,56 @@
   
 {{ form_end(form) }}
 
-
+#}
 <a href="{{ path('fos_user_profile_show') }}"> Retourner au profile. </a>
 
 </div> 
+
+
+
+ 
+
+   
+
+  
+<div id='t'>
+  <table style='border-collapse: collapse;background-color: #FFFFFF;'>
+      <tr> 
+          <td>Type</td>
+           <td>Mois</td>
+           <td>Montant</td>
+      </tr>
+       {% for aff in listaff %}
+       <tr> 
+            
+           
+          <td>{{ aff.nom }}</td>
+           <td>{{ aff.mois}}</td>
+           <td>{{ aff.montant }}</td>
+           
+            
+      </tr>
+      
+      {% endfor %}
+      
+      
+   
+         
+  </table>
+</div>   
+      <style type='text/css'>
+          td, th /* Mettre une bordure sur les td ET les th */
+
+{
+
+    border: 1px solid black;
+
+}
+
+body{
+    background-color: #960cf2;
+}
+          </style>
+          
+         
+     

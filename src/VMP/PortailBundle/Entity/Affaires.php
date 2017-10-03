@@ -58,7 +58,8 @@ class Affaires
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="affaires" , cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="affaires")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $societe;
     
@@ -217,5 +218,12 @@ class Affaires
     public function getSociete()
     {
         return $this->societe;
+    }
+    
+     public function __toString(){
+        // to show the name of the Category in the select
+        return $this->nom;
+        // to show the id of the Category in the select
+        // return $this->id;
     }
 }

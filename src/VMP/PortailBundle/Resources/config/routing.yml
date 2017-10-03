@@ -10,4 +10,10 @@ vmp_portail_add:
     path:     /Portail/add
     defaults: { _controller: VMPPortailBundle:Advert:add }
     
-            
+vmp_portail_forms:
+    path:     /Portail/forms
+    defaults: { _controller: VMPPortailBundle:Advert:forms }    
+    
+vmp_portail_forma:
+    path:     /Portail/forma
+    defaults: { _controller: VMPPortailBundle:Advert:forma }             

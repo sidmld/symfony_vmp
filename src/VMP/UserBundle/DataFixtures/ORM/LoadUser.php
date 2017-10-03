@@ -16,7 +16,7 @@ class LoadUser implements FixtureInterface
 
     // Les noms d'utilisateurs à créer
 
-    $listNames = array('VMP', 'CPAM', 'Amiens');
+    $listNames = array('LDs');
 
 
     foreach ($listNames as $name) {

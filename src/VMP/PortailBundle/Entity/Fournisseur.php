@@ -315,5 +315,11 @@ class Fournisseur
         return $this->autre;
     }
 
+     public function __toString(){
+        // to show the name of the Category in the select
+        return $this->nom;
+        // to show the id of the Category in the select
+        // return $this->id;
+    }
      
 }

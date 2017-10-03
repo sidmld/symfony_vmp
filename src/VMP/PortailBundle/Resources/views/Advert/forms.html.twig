@@ -1,0 +1,14 @@
+
+
+<div  class="well">
+    <h2> Completer ou Modifier vos données </h2> 
+    
+     {{ form_start(form, {'method': 'post', 'action': path('vmp_portail_forms')}) }}
+    
+  
+{{ form_end(form) }}
+   <a href="{{ path('fos_user_profile_show') }}"> Retourner au profile. </a> 
+</div>
+
+
+  

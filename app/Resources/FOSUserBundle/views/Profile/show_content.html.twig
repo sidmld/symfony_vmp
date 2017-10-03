@@ -26,18 +26,22 @@
                 </header>
                
                 <div class="fos_user_user_show">
-    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
+    <p>{{ 'profile.show.username'|trans }}: {{ user.username }}.</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-    <p> {{ user.nomsociete }} </p>
-    <p> {{user.ville }} </p>
-    <p> {{ user.telephone }} </p>
+    <p> Nom de l'entreprise:  {{ user.nomsociete }} .</p>
+    <p> Chiffre d'affaire: {{user.chiffre }}  euros.</p>
+    <p> Entreprise: {{user.type }}.   </p>
+    <p> Ville:  {{user.ville }}. </p>
+    <p>Telephone:  {{ user.telephone }}. </p>
+    <p> Site internet: {{user.siteweb }}. </p>
    
-
+    <a style="color: #0033ff" href="{{ path('vmp_portail_forms') }}"> Completez ou Modifiez vos données personnels. </a>
 </div>
                 
                 
                 <ul class="actions">
                     <!--	<li><a href="generic.html" class="button"></a></li>-->
+                    
                 </ul>
             </div>
             <span class="image"><img src="images/v1.png" alt="" /></span>
@@ -108,7 +112,7 @@
             <ul class="actions">
                 <li><a href="{{path("fos_user_profile_edit")}}" class="button special">Mise à jour du profile</a></li>
                 <li><a href="{{path("fos_user_change_password")}}" class="button special">Modification du mot de passe</a></li>
-                {% if app.user.username=="AdminVMP" %}
+                {% if app.user.username=="VMPadmin" %}
                 <li><a href="http://localhost:8000/admin" class="button">Administration</a></li>
                 {% endif %}
             </ul>

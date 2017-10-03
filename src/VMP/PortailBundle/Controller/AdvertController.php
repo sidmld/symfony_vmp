@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 //use Symfony\Component\HttpFoundation\RedirectResponse;
 use VMP\UserBundle\Entity\User;
+use VMP\UserBundle\Form\UserType;
 use VMP\PortailBundle\Entity\Affaires;
 use VMP\PortailBundle\Form\AffairesType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -30,7 +31,19 @@ class AdvertController extends  Controller
     
     public function viewAction(Request $request)
     {
-               
+          
+        $repository=$this
+                ->getDoctrine()
+                ->getManager()
+                ->getRepository('VMPPortailBundle:Affaires');
+        
+        $listeaff=$repository->findAll();
+        
+       // foreach ($listeaff as $aff){
+      //      echo $aff->getMois();
+      //  }
+        
+        
      $pieChart = new PieChart();
     $pieChart->getData()->setArrayToDataTable(
         [['Pourcentage', 'Par mois'],
@@ -71,12 +84,42 @@ class AdvertController extends  Controller
         
      return $this->render('VMPPortailBundle:Advert:view.html.twig', 
              array('piechart' => $pieChart,
-                 'form' => $form->createView()));
+                 'form' => $form->createView(),
+                   'listaff' => $listeaff));
     }
     
     public function addAction(){
       
     }
     
+    
+    public function formsAction(Request $request){
+      
+         $societe = new User();
+    $form   = $this->get('form.factory')->create(UserType::class, $societe);
+
+    if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+      $em = $this->getDoctrine()->getManager();
+      $em->persist($societe);
+      $em->flush();
+
+      
+
+    // return $this->redirectToRoute('vmp_portail_forms');
+    }
+
+   
+        
+        
+     return $this->render('VMPPortailBundle:Advert:forms.html.twig', 
+             array('form' => $form->createView()));
+        
+        
+    }
+    
+    
+    public function formaAction(){
+      
+    }
    
 }

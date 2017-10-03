@@ -103,47 +103,55 @@ class User extends BaseUser
     protected $autre;
     
      /**
-     * @ORM\OneToOne(targetEntity="VMP\PortailBundle\Entity\Budget" , cascade={"persist"})
+     * @ORM\OneToOne(targetEntity="VMP\PortailBundle\Entity\Budget", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=true)
      */
      protected $budget;
      
      
      /**
-     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Client" , cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Client")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $clients;
      
     /**
-     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Fournisseur" , cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="VMP\PortailBundle\Entity\Fournisseur")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $fournisseurs;
     
      /**
-     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Personnel", mappedBy="societe" , cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Personnel", mappedBy="societe" )
+      * @ORM\JoinColumn(nullable=true)
      */
     protected $personnel;
    
     /**
-     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Produit",mappedBy="societe" , cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Produit",mappedBy="societe" )
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $produit;
     
     /**
-     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Affaires",mappedBy="societe" , cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Affaires",mappedBy="societe")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $affaires;
     
     /**
-     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Charges",mappedBy="societe" , cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Charges",mappedBy="societe")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $charges;
     
     /**
-     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Activite",mappedBy="societe" , cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="VMP\PortailBundle\Entity\Activite",mappedBy="societe")
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $activites;
 
-    /////   a netoyer
+   
     
 
     /**
@@ -671,4 +679,13 @@ class User extends BaseUser
     {
         return $this->activites;
     }
+    /*
+     public function __toString(){
+        // to show the name of the Category in the select
+        return $this->nomsociete;
+        // to show the id of the Category in the select
+        // return $this->id;
+    }
+    */
+    
 }

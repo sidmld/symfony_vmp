@@ -80,7 +80,8 @@ class Produit
     private $autre;
 
     /**
-     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="produit" , cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="VMP\UserBundle\Entity\User", inversedBy="produit" )
+     * @ORM\JoinColumn(nullable=true)
      */
     protected $societe;
 
@@ -312,5 +313,12 @@ class Produit
     public function getSociete()
     {
         return $this->societe;
+    }
+    
+     public function __toString(){
+        // to show the name of the Category in the select
+        return $this->nom;
+        // to show the id of the Category in the select
+        // return $this->id;
     }
 }
