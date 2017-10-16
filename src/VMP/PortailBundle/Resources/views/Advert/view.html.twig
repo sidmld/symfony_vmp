@@ -1,4 +1,10 @@
+<html>
+  <head> 
+  	<title> Tableau de bord</title>
+  	<meta http-equiv="refresh" content="30" />
+  </head>
 
+<body>
  <div id="curve_chart" style='width: 900px;' ></div>
  
        
@@ -6,8 +12,13 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
+
+  
+   
+ 	  
+          
+		
       
-     
 
       function drawChart() {
           
@@ -35,7 +46,6 @@
         chart.draw(data, options);
       }
       
-     
      
      
     
@@ -76,9 +86,10 @@
 <div id='t'>
   <table style='border-collapse: collapse;background-color: #FFFFFF;'>
       <tr> 
-          <td>Type</td>
+          <td>chiffre d'affaires</td>
            <td>Mois</td>
            <td>Montant</td>
+           
       </tr>
        {% for aff in listaff %}
        <tr> 
@@ -87,7 +98,7 @@
           <td>{{ aff.nom }}</td>
            <td>{{ aff.mois}}</td>
            <td>{{ aff.montant }}</td>
-           
+         
             
       </tr>
       
@@ -111,6 +122,6 @@ body{
     background-color: #960cf2;
 }
           </style>
-          
-         
+          </body>
+    </html>     
      

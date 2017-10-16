@@ -46,15 +46,15 @@ class AdvertController extends  Controller
         
      $pieChart = new PieChart();
     $pieChart->getData()->setArrayToDataTable(
-        [['Pourcentage', 'Par mois'],
-         ['Production',     11],
-         ['Fournisseurs',      2],
-         ['Clients',  2],
-         ['Autres', 2],
-         ['Benefies',    7]
+        [['Mois', 'euros'],
+            ['Janiver',   $repository->find(3)->getMontant()],
+            ['Mars',      $repository->find(5)->getMontant()],
+            ['Avril',  $repository->find(6)->getMontant()],
+            ['Mai', $repository->find(7)->getMontant()],
+            ['Juin',    $repository->find(8)->getMontant()]
         ]
     );
-    $pieChart->getOptions()->setTitle('Pourcentages des resources');
+    $pieChart->getOptions()->setTitle('Chiffre d\'affaire réel');
     $pieChart->getOptions()->setHeight(500);
     $pieChart->getOptions()->setWidth(900);
     $pieChart->getOptions()->getTitleTextStyle()->setBold(true);
