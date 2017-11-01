@@ -150,11 +150,19 @@ $combo->getOptions()->setHeight(500);
                  'combo' => $combo,
                  'form' => $form->createView(),                
                    'listaff' => $listeaff));
+             
+             
+             
+             
     }
+    
+    
     
     public function addAction(){
       
     }
+    
+    
     
     
     public function formsAction(Request $request){
@@ -209,6 +217,10 @@ $combo->getOptions()->setHeight(500);
         $liste3=$repository3->findAll();
         $liste4=$repository4->findAll();
         
+        
+        
+        
+        
         return $this->render('VMPPortailBundle:Advert:forma.html.twig',
             array('listech' => $listech,
                 'liste2' => $liste2,
@@ -216,6 +228,66 @@ $combo->getOptions()->setHeight(500);
                 'liste4' => $liste4
             ));
       
+    }
+    
+    
+    
+    public function pdfAction()
+    {
+        
+        $repository1=$this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('VMPPortailBundle:Produit');
+        
+        $repository2=$this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('VMPPortailBundle:Fournisseur');
+        
+        $repository3=$this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('VMPPortailBundle:Personnel');
+        
+        $repository4=$this
+        ->getDoctrine()
+        ->getManager()
+        ->getRepository('VMPPortailBundle:Client');
+        
+        $listech=$repository1->findAll();
+        $liste2=$repository2->findAll();
+        $liste3=$repository3->findAll();
+        $liste4=$repository4->findAll();
+        
+        
+        
+       
+        
+        
+        
+        
+        
+        $html = $this->renderView('VMPPortailBundle:Advert:pdf.html.twig', array('listech' => $listech,
+            'liste2' => $liste2,
+            'liste3' => $liste3,
+            'liste4' => $liste4
+        ));
+        $url = 'http://localhost:8000/Portail/compte/';
+        $filename = sprintf('test-%s.pdf', date('Y-m-d'));
+        
+        return new Response(
+            $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
+            200,
+            [
+                'Content-Type'        => 'application/pdf',
+                'Content-Disposition' => sprintf('attachment; filename="%s"', $filename),
+            ]
+            );
+        
+        
+     
+        
     }
    
 }

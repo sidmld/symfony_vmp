@@ -1,0 +1,145 @@
+<html>
+  <head> 
+  	<title> Tableau de bord</title>
+  	
+  </head>
+
+<body>
+
+
+
+   
+<h2>Les Produits</h2>
+  
+<div id='t'>
+  <table style='border-collapse: collapse;background-color: #FFFFFF;'>
+      <tr> 
+          <td>Type</td>
+           <td>Mois</td>
+           <td>Montant</td>
+           
+      </tr>
+       {% for ch in listech %}
+       <tr> 
+            
+           
+          <td>{{ ch.nom }}</td>
+           <td>{{ ch.prix}}</td>
+           <td>{{ ch.type }}</td>
+         
+            
+      </tr>
+      
+      {% endfor %}
+      
+      
+   
+         
+  </table>
+</div>   
+
+<h2>Les Fournisseurs</h2>
+  
+<div id='t2'>
+  <table style='border-collapse: collapse;background-color: #FFFFFF;'>
+      <tr> 
+          <td>Nom</td>
+           <td>Type</td>
+           <td>Address</td>
+           
+      </tr>
+       {% for ch in liste2 %}
+       <tr> 
+            
+           
+          <td>{{ ch.nom }}</td>
+           <td>{{ ch.type}}</td>
+           <td>{{ ch.address }}</td>
+         
+            
+      </tr>
+      
+      {% endfor %}
+      
+      
+   
+         
+  </table>
+</div>   
+
+
+<h2>Les Personnels</h2>
+  
+<div id='t3'>
+  <table style='border-collapse: collapse;background-color: #FFFFFF;'>
+      <tr> 
+          <td>Nom</td>
+           <td>Prenom</td>
+           <td>poste</td>
+           
+      </tr>
+       {% for ch in liste3 %}
+       <tr> 
+            
+           
+          <td>{{ ch.nom }}</td>
+           <td>{{ ch.prenom}}</td>
+           <td>{{ ch.poste }}</td>
+         
+            
+      </tr>
+      
+      {% endfor %}
+      
+      
+   
+         
+  </table>
+</div>   
+
+<h2>Les Clients</h2>
+  
+<div id='t4'>
+  <table style='border-collapse: collapse;background-color: #FFFFFF;'>
+      <tr> 
+          <td>Nom</td>
+           <td>type</td>
+           <td>Address</td>
+           
+      </tr>
+       {% for ch in liste4 %}
+       <tr> 
+            
+           
+          <td>{{ ch.nom }}</td>
+           <td>{{ ch.type}}</td>
+           <td>{{ ch.ville }}</td>
+         
+            
+      </tr>
+      
+      {% endfor %}
+      
+      
+   
+         
+  </table>
+</div>   
+
+
+      <style type='text/css'>
+          td, th /* Mettre une bordure sur les td ET les th */
+
+{
+
+    border: 1px solid black;
+
+}
+
+body{
+    background-color: #960cf2;
+}
+          </style>
+          </body>
+    </html>     
+     

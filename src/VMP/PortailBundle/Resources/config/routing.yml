@@ -16,4 +16,8 @@ vmp_portail_forms:
     
 vmp_portail_forma:
     path:     /Portail/forma
-    defaults: { _controller: VMPPortailBundle:Advert:forma }             
+    defaults: { _controller: VMPPortailBundle:Advert:forma }
+    
+pdf:
+    path:     /pdf
+    defaults: { _controller: VMPPortailBundle:Advert:pdf }                 
