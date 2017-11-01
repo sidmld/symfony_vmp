@@ -9,7 +9,7 @@
     <ul>
         <li><a href="#intro" class="active">Profil</a></li>
         <li><a href="#first">Tableau de bord</a></li>
-        <li><a href="#second">Statistique</a></li>
+        <li><a href="#second">Données</a></li>
         <li> <a href="#cta"> Parametres  </a></li>
     </ul>
 </nav>
@@ -74,27 +74,14 @@
     <!-- Second Section -->
     <section id="second" class="main special">
         <header class="major">
-            <h2>Statistiques</h2>
+            <h2> Données </h2>
             <p>
-
+                Données Entreprise
             </p>
         </header>
-        <ul class="statistics">
-
-            <li class="style2">
-                <span class="icon fa-folder-open-o"></span>
-                <strong></strong> Optimisation
-            </li>
-            <li class="style3">
-                <span class="icon fa-signal"></span>
-                <strong></strong> Statistiques
-            </li>
-            <li class="style4">
-                <span class="icon fa-laptop"></span>
-                <strong></strong> Tableaux de bord
-            </li>
-
-        </ul>
+       
+         {{render(controller("VMPPortailBundle:Advert:forma")) }} 
+        
         <p class="content"></p>
         <footer class="major">
             <ul class="actions">
@@ -121,36 +108,7 @@
 
 </div> 
     
- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Mois', 'Reel', 'Ambition'],
-          ['Janvier',  35312,      22769],
-          ['Fevrier',  ,      27284],
-          ['Mars',  37447,       29936],
-          ['Avril',  30236,      28912],
-          ['Mai',  31237,      27499],
-          ['Juin',  30600,       25060],
-          ['Juillet',  29738,       24174],          
-          ['Aout',  27000,       23521],
-          ['Septembre',  34000,      32042]
-        ]);
-
-        var options = {
-          title: 'Chiffre d\'affaire',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
     
     
           

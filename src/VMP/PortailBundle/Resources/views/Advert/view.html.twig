@@ -1,66 +1,24 @@
 <html>
   <head> 
   	<title> Tableau de bord</title>
-  	<meta http-equiv="refresh" content="30" />
+  	
   </head>
 
 <body>
- <div id="curve_chart" style='width: 900px;' ></div>
- 
-       
-           <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-  
-   
- 	  
-          
-		
-      
-
-      function drawChart() {
-          
-        var data = google.visualization.arrayToDataTable([
-          ['Mois', 'Reel', 'Ambition'],           
-          ['Janvier',  35312,      22769],
-          ['Fevrier',  ,      27284],
-          ['Mars',  37447,       29936],
-          ['Avril',  30236,      28912],
-          ['Mai',  31237,      27499],
-          ['Juin',  30600,       25060],
-          ['Juillet',  29738,       24174],          
-          ['Aout',  27000,       23521],
-          ['Septembre',  34000,      32042]
-        ]);
-
-        var options = {
-          title: 'Chiffre d\'affaire',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-      
-     
-     
-    
-     
-    </script>
+ <div id="line_chart" style="widht:900px;" ></div>
 
   <div id="div_chart"></div>
     
+     <div id="combo"  ></div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         
         {{ gc_draw(piechart, 'div_chart') }}
+             {{ gc_draw(chart, 'line_chart') }}
+                 {{ gc_draw(combo, 'combo') }}
     </script>
            
-     <div " class="well">
+     <div  class="well">
 
  {# {{ form(form) }} 
 
@@ -71,14 +29,14 @@
   
 {{ form_end(form) }}
 
-#}
+
 <a href="{{ path('fos_user_profile_show') }}"> Retourner au profile. </a>
 
 </div> 
 
 
 
- 
+
 
    
 
@@ -109,6 +67,7 @@
          
   </table>
 </div>   
+#}
       <style type='text/css'>
           td, th /* Mettre une bordure sur les td ET les th */
 
